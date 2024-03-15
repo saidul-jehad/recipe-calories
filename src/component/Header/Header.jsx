@@ -16,7 +16,7 @@ const Header = () => {
                             <li>Search</li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-3xl font-bold">Recipe Calories</a>
+                    <a className="btn btn-ghost text-xl lg:text-3xl font-semibold lg:font-bold">Recipe Calories</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal space-x-3 px-1">
@@ -28,11 +28,11 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
 
-                    <div className="flex items-center bg-gray-200 px-3 rounded-2xl" >
-                    <i className="fa-solid fa-magnifying-glass"></i> <input type="text" placeholder="Type here" className="input bg-gray-200 focus:outline-none border-none input-primary w-full max-w-xs" />
+                    <div className="flex items-center bg-gray-200 px-3 rounded-full" >
+                    <i className="fa-solid fa-magnifying-glass"></i> <input type="Search" placeholder="Search" className="input bg-gray-200 focus:outline-none border-none input-primary w-full max-w-xs" />
                     </div>
 
-                    <a className="btn btn-ghost" href=""><i className="fa-regular bg-green-400 rounded-full p-2 fa-2x fa-circle-user"></i></a>
+                    <a className="btn btn-ghost" href=""><i className="fa-regular bg-green-400 rounded-full p-2  fa-2x fa-circle-user"></i></a>
                 </div>
             </div>
         </div>

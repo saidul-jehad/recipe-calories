@@ -7,6 +7,7 @@ import Recipes from './component/Recipes/Recipes'
 // import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { data } from 'autoprefixer'
 
 function App() {
 
@@ -25,15 +26,12 @@ function App() {
   }
 
 
-  const handleAddCookingRemoveData = (cooking, index) => {
+  const handleAddCookingRemoveData = (cooking, recipe_id) => {
     const newCookingData = [...cookingData, cooking]
     // console.log(newCookingData);
     setCookingData(newCookingData)
 
-
-    const newCookingData2 = [...tableData];
-    newCookingData2.splice(index, 1);
-    setTableData(newCookingData2);
+    setTableData(tableData.filter(data => data.recipe_id !== recipe_id));
 
   }
 

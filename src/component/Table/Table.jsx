@@ -1,13 +1,17 @@
 import TableData from "../TableData/TableData";
 import PropTypes from 'prop-types';
+import React from 'react';
 
-const Table = ({tableData}) => {
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const Table = ({ tableData }) => {
     const [recipe_name] = tableData
 
     // console.log(tableData);
 
     return (
-        <div className="bg-slate-100 p-8">
+        <div className="bg-slate-100 p-8 rounded-xl">
             <h2 className="text-2xl font-semibold text-center border-b-2 mb-5 pb-4">Want to cook : <span>{tableData.length}</span></h2>
             <table>
                 <thead className="text-lg">
@@ -22,8 +26,8 @@ const Table = ({tableData}) => {
             <div>
                 {
                     tableData.map((data, idx) => <TableData key={idx}
-                    data={data}
-                    idx={idx}
+                        data={data}
+                        idx={idx}
                     ></TableData>)
                 }
             </div>
@@ -32,7 +36,7 @@ const Table = ({tableData}) => {
     );
 };
 
-Table.propTypes ={
+Table.propTypes = {
     tableData: PropTypes.array
 }
 

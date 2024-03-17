@@ -6,7 +6,7 @@ const Banner = () => {
 
                 <p className="lg:text-5xl lg:font-bold font-semibold text-3xl lg:w-[800px] mx-auto ">Discover an exceptional cooking class tailored for you!</p>
                 <p className="text-lg lg:w-[900px]">
-                    Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.
+                    Explore culinary delights with our Recipe Section 30! From mouthwatering mains to delectable desserts, discover new flavors and inspire your next culinary adventure.
                 </p>
             </div>
 

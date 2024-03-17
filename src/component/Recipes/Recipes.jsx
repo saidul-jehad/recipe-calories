@@ -6,7 +6,7 @@ import Table from "../Table/Table";
 import PropTypes from 'prop-types';
 
 
-const Recipes = ({handleAddToTable, tableData}) => {
+const Recipes = ({ handleAddToTable, tableData }) => {
 
     const [recipes, setRecipes] = useState([])
 
@@ -18,15 +18,15 @@ const Recipes = ({handleAddToTable, tableData}) => {
 
     return (
         <>
-            <div className="lg:w-[820px] mx-auto text-center space-y-4">
+            <div className="lg:w-[820px] mx-auto text-center space-y-4 mt-10">
                 <h2 className="text-4xl font-semibold">Our Recipes</h2>
-                <p className="text-[16px]">Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus vulputate netus pharetra rhoncus. Eget urna volutpat curabitur elementum mauris aenean neque. </p>
+                <p className="text-[16px]">Explore culinary delights with our Recipe Section 30! From mouthwatering mains to delectable desserts, discover new flavors and inspire your next culinary adventure.</p>
             </div>
 
             {/* Card container */}
             <div className="flex flex-col lg:flex-row mt-12 gap-6">
                 {/*recipes  */}
-                <div className="lg:w-4/6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-6">
                     {
                         recipes.map(recipe => <Recipe
                             key={recipe.recipe_id}
@@ -37,7 +37,7 @@ const Recipes = ({handleAddToTable, tableData}) => {
                 </div>
 
                 {/* details */}
-                <div className="lg:w-1/3">
+                <div className="lg:w-[40%]">
                     <Table tableData={tableData}></Table>
                 </div>
             </div>
@@ -47,8 +47,8 @@ const Recipes = ({handleAddToTable, tableData}) => {
     );
 };
 
-Recipes.propTypes ={
-    handleAddToTable : PropTypes.func,
+Recipes.propTypes = {
+    handleAddToTable: PropTypes.func,
     tableData: PropTypes.array
 }
 

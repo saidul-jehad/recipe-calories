@@ -6,7 +6,7 @@ import Table from "../Table/Table";
 import PropTypes from 'prop-types';
 
 
-const Recipes = ({ handleAddToTable, tableData }) => {
+const Recipes = ({ handleAddToTable, tableData , handleAddCookingRemoveData, cookingData}) => {
 
     const [recipes, setRecipes] = useState([])
 
@@ -38,7 +38,10 @@ const Recipes = ({ handleAddToTable, tableData }) => {
 
                 {/* details */}
                 <div className="lg:w-[40%]">
-                    <Table tableData={tableData}></Table>
+                    <Table tableData={tableData}
+                    handleAddCookingRemoveData={handleAddCookingRemoveData}
+                    cookingData={cookingData}
+                    ></Table>
                 </div>
             </div>
 
@@ -49,7 +52,9 @@ const Recipes = ({ handleAddToTable, tableData }) => {
 
 Recipes.propTypes = {
     handleAddToTable: PropTypes.func,
-    tableData: PropTypes.array
+    tableData: PropTypes.array,
+    handleAddCookingRemoveData: PropTypes.func,
+    cookingData: PropTypes.array
 }
 
 

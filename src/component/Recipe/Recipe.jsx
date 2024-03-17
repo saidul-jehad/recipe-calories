@@ -31,7 +31,7 @@ const Recipe = ({ recipe, handleAddToTable }) => {
                 </div>
             </div>
 
-            <button onClick={() =>handleAddToTable(recipe)} className="btn text-lg font-medium rounded-full bg-green-500 px-6">Want to Cook</button>
+            <button onClick={() =>handleAddToTable(recipe)} className="btn text-lg font-medium  bg-green-500 px-6">Want to Cook</button>
         </div>
     );
 };

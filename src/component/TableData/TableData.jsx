@@ -1,9 +1,9 @@
 
+import PropTypes from 'prop-types';
 
-const TableData = ({ data, idx }) => {
+const TableData = ({ data, idx, handleAddCookingRemoveData }) => {
     const {recipe_name, preparing_time, calories } = data;
     
-
 
 
     return (
@@ -13,13 +13,17 @@ const TableData = ({ data, idx }) => {
             <p>{preparing_time}<span> minutes</span></p>
             <p>{calories} <span>calories</span></p>
 
-            <button className="btn bg-green-400 rounded-full">Preparing</button>
+            <button onClick={() => handleAddCookingRemoveData(data)} className="btn bg-green-400">Preparing</button>
 
 
         </div>
-
-
     );
 };
+
+TableData.propTypes ={
+    data: PropTypes.object,
+    idx: PropTypes.number,
+    handleAddCookingRemoveData: PropTypes.func
+}
 
 export default TableData;

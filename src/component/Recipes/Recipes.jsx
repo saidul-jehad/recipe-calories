@@ -1,10 +1,12 @@
-import { data } from "autoprefixer";
+// import { data } from "autoprefixer";
 import { useEffect } from "react";
 import { useState } from "react"
 import Recipe from "../Recipe/Recipe";
+import Table from "../Table/Table";
+import PropTypes from 'prop-types';
 
 
-const Recipes = () => {
+const Recipes = ({handleAddToTable, tableData}) => {
 
     const [recipes, setRecipes] = useState([])
 
@@ -14,12 +16,6 @@ const Recipes = () => {
             .then(data => setRecipes(data))
     }, [])
 
-
-
-
-
-
-
     return (
         <>
             <div className="lg:w-[820px] mx-auto text-center space-y-4">
@@ -28,20 +24,21 @@ const Recipes = () => {
             </div>
 
             {/* Card container */}
-            <div className="flex flex-col lg:flex-row mt-12">
+            <div className="flex flex-col lg:flex-row mt-12 gap-6">
                 {/*recipes  */}
                 <div className="lg:w-4/6 grid grid-cols-1 md:grid-cols-2 gap-6">
                     {
                         recipes.map(recipe => <Recipe
                             key={recipe.recipe_id}
                             recipe={recipe}
+                            handleAddToTable={handleAddToTable}
                         ></Recipe>)
                     }
                 </div>
 
                 {/* details */}
                 <div className="lg:w-1/3">
-                    <h2>Show Details</h2>
+                    <Table tableData={tableData}></Table>
                 </div>
             </div>
 
@@ -49,5 +46,11 @@ const Recipes = () => {
         </>
     );
 };
+
+Recipes.propTypes ={
+    handleAddToTable : PropTypes.func,
+    tableData: PropTypes.array
+}
+
 
 export default Recipes;

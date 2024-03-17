@@ -1,7 +1,7 @@
 
 const Banner = () => {
     return (
-        <div className="hidden font-lexend bg-[url(/public/images/banner.png)] lg:h-[550px] bg-no-repeat lg:p-6 flex flex-col justify-center items-center space-y-6 rounded-2xl mt-8 p-7">
+        <div className="font-lexend bg-[url(/public/images/banner.png)] lg:h-[550px] bg-no-repeat lg:p-6 flex flex-col justify-center items-center space-y-6 rounded-2xl mt-8 p-7">
             <div className="text-white text-center space-y-6">
 
                 <p className="lg:text-5xl lg:font-bold font-semibold text-3xl lg:w-[800px] mx-auto ">Discover an exceptional cooking class tailored for you!</p>
